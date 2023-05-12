@@ -9,13 +9,64 @@
   --accent-2: var(--ripe-mango);
   --fg: var(--milk-chocolate);
   --bg: var(--alabaster);
+  
+  --font-heading: 'New Editorial';
+  --font-body: 'Space Grotesk';
 
   --h1: 4.3rem;
   --h2: 3.1rem;
-  --body: 1rem;
+}
+
+h1, .h1 {
+  font-size: var(--h1);
+}
+
+h2, .h2 {
+  font-size: var(--h2);
 }
 
 body {
+  font-size: 16px;
+  background-color: var(--bg);
+}
+
+header {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+}
+
+.button-primary {
+  padding: .46rem 3.8rem .4rem;
+  border-radius: 4px;
+  color: var(--bg);
+  background: var(--accent);
+  font-family: 'Space Grotesk';
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.nav > .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  min-width: 203px;
+  display: flex;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .marquee {

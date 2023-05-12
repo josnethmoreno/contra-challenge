@@ -41,6 +41,12 @@ button {
 	cursor: pointer;
 }
 
+button:has(.icon) {
+	display: flex;
+	align-items: center;
+	gap: .4rem;
+}
+
 p,
 h1,
 h2,

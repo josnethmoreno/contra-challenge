@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'MiFuente';
-  src: url('/fonts/.ttf') format('opentype');
+  font-family: 'Editorial New';
+  src: url('/fonts/PPEditorialNew-Regular.otf') format('opentype');
 }
 
 .icon {
@@ -27,7 +27,7 @@
 }
 
 .icon-arrow-right {
-  width: 19px;
-  height: 12px;
+  width: 26px;
+  height: 13px;
   background-image: url('/icons/arrow-right.svg');
 }

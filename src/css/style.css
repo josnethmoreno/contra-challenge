@@ -15,6 +15,9 @@
   --body: 1rem;
 }
 
+body {
+}
+
 .marquee {
   background-color: green;
 }

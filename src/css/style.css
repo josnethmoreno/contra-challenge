@@ -70,10 +70,12 @@ a, span, p {
 
 /* HEADER */
 header {
-  padding: 1rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  padding: 1rem 0;
   background-color: var(--bg);
+  z-index: 10;
 }
 
 .button-primary {
@@ -224,8 +226,6 @@ header {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .areas-card:last-child {
   align-self: flex-end;

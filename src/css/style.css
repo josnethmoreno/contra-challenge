@@ -3,6 +3,7 @@
   --yellow: #FECA22;
   --beige: #F2EBE4;
   --dark: #292929;
+  --white-coffe: #e6dbd2;
   --coffee: #7F4F2E;
 
   --accent: var(--green);
@@ -166,4 +167,41 @@ header {
   100% {
     transform: translate(-100%, 0);
   }
+}
+
+/*SERVICES*/
+.services > .container {
+  display: flex;
+  gap: var(--spacer-2)
+}
+.services-content {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: var(--spacer);
+  padding: 1.5rem;
+  width: 436px;
+  border-radius: 8px;
+  background-color: var(--white-coffe);
+  text-align: center;
+}
+
+.services-content p {
+  text-transform: uppercase;
+}
+
+.services-content ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: .8rem;
+  height: 245px;
+  text-align: left;
+  color: var(--fg);
+}
+
+.services-figure figcaption {
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: .6rem;
 }

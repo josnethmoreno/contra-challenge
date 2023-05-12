@@ -43,7 +43,7 @@ button {
 button:has(.icon) {
 	display: flex;
 	align-items: center;
-	gap: .4rem;
+	gap: 0.4rem;
 }
 
 p,
@@ -56,7 +56,12 @@ h6 {
 	overflow-wrap: break-word;
 }
 
-a{
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+a {
 	text-decoration: none;
-  cursor: pointer;
+	cursor: pointer;
 }

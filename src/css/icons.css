@@ -1,0 +1,7 @@
+.icon-toggle {
+  display: inline-block;
+  width: 25px;
+  height: 11px;
+  background-image: url('../../public/toggle.svg');
+  background-repeat: no-repeat;
+}

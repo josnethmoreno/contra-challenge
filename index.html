@@ -150,9 +150,50 @@
             </figure>
           </article>
         </div>
-        <div class="areas-carousel">
-          <img src="./src/img/carousel.jpg" alt="">
-          <figcaption>Flat screen TV</figcaption>
+        <div class="splide" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./src/img/carousel/flat-screen.jpg" alt="Flat screen TV">
+                <figcaption>Flat tv screen</figcaption>
+              </li>
+              <li class="splide__slide">
+                <img src="./src/img/carousel/terrace.jpg" alt="Terrace">
+                <figcaption>Terrace</figcaption>
+              </li>
+              <li class="splide__slide">
+                <img src="./src/img/carousel/bar.jpg" alt="Minibar">
+                <figcaption>Minibar</figcaption>
+              </li>
+              <li class="splide__slide">
+                <img src="./src/img/carousel/pool.jpg" alt="Pool">
+                <figcaption>Pool</figcaption>
+              </li>
+            </ul>
+          </div>
+          <div class="splide-controls">
+            <div class="splide__margin"></div>
+            <div class="splide__pagination">
+              <span class="splide__current-page"></span>/
+              <span class="splide__total-page"></span>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.97986e-06 8C6.17935 8 11.1759 11.5841 11.1759 16M9.97986e-06 8C6.17935 8 11.1759 4.41593 11.1759 0M9.97986e-06 8L25.5873 8"
+                    stroke="#004A3C" stroke-miterlimit="10" />
+                </svg>
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M26.1746 8C19.9953 8 14.9987 11.5841 14.9987 16M26.1746 8C19.9953 8 14.9987 4.41593 14.9987 0M26.1746 8L0.58731 8"
+                    stroke="#004A3C" stroke-miterlimit="10" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

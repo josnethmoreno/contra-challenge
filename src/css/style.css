@@ -1,3 +1,5 @@
+@import '@splidejs/splide/css/core';
+
 :root {
   --green: #004A3C;
   --yellow: #FECA22;
@@ -219,7 +221,7 @@ header {
 .areas figcaption {
   color: var(--accent);
   text-transform: uppercase;
-  margin-top: .6rem;
+  margin-top: var(--spacer);
 }
 
 .areas-wrapper {
@@ -230,4 +232,18 @@ header {
 .areas-card:last-child {
   align-self: flex-end;
   transform: translateY(-120px);
+}
+
+/*SPLIDE*/
+.splide-controls {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--accent);
+}
+
+.splide-controls .splide__margin {
+  width: 112px;
 }

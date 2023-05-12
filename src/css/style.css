@@ -1,14 +1,14 @@
 :root {
-  --blue-green: #004A3C;
-  --alabaster: #F2EBE4;
-  --white-coffee: #E6DBD2;
-  --milk-chocolate: #7F4F2E;
-  --ripe-mango: #FECA22;
+  --green: #004A3C;
+  --yellow: #FECA22;
+  --beige: #F2EBE4;
+  --dark: #292929;
+  --coffee: #7F4F2E;
 
-  --accent: var(--blue-green);
-  --accent-2: var(--ripe-mango);
-  --fg: var(--milk-chocolate);
-  --bg: var(--alabaster);
+  --accent: var(--green);
+  --accent-2: var(--yellow);
+  --fg: var(--coffee);
+  --bg: var(--beige);
   
   --font-heading: 'New Editorial';
   --font-body: 'Space Grotesk';
@@ -32,6 +32,7 @@ body {
   font-size: 16px;
   background-color: var(--bg);
   font-family: 'Space Grotesk';
+  line-height: 1.5;
 }
 
 section {
@@ -75,12 +76,12 @@ header {
 }
 
 .button-primary {
-  padding: .46rem 3.8rem .4rem;
+  padding: .53rem 3.8rem .5rem;
   border-radius: 4px;
   color: var(--bg);
   background: var(--accent);
   text-transform: uppercase;
-  line-height: 1.5;
+  font-weight: 400;
 }
 
 .nav > .container {
@@ -91,6 +92,7 @@ header {
 .nav-left {
   min-width: 203px;
   display: flex;
+  gap: .4rem;
 }
 
 .nav-lang {
@@ -114,7 +116,11 @@ header {
   display: flex;
   flex-direction: column;
   gap: var(--spacer-2);
-  max-width: 440px;
+  max-width: 500px;
+}
+
+.hero-content p {
+  width: 436px;
 }
 
 .hero-content h1 {
@@ -134,5 +140,30 @@ header {
 
 /* MARQUEE */
 .marquee {
-  background-color: green;
+  display: flex;
+  gap: var(--spacer);
+  padding: 1.6rem 0 1.5rem;
+  background-color: var(--accent);
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee p {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--bg);
+  white-space: nowrap;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  animation: marquee 14s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(2%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }

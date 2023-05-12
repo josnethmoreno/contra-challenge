@@ -4,12 +4,6 @@ import '../css/icons.css'
 
 import Splide from '@splidejs/splide/dist/js/splide'
 
-const buttonRight = document.createElement('button')
-buttonRight.innerText = '->'
-
-const buttonLeft = document.createElement('button')
-buttonLeft.innerText = '<-'
-
 const splide = new Splide('.splide', {
 	pagination: true,
 	perPage: 1,
@@ -23,9 +17,8 @@ let currentPage = splide.index + 1
 let currentPageDiv = document.querySelector('.splide__current-page')
 currentPageDiv.innerText = currentPage
 
-splide.on('moved', function () {
+splide.on('move', function () {
 	currentPage = splide.index + 1
 	currentPageDiv = document.querySelector('.splide__current-page')
 	currentPageDiv.innerText = currentPage
-	// Do something with the current page number
 })

@@ -12,6 +12,7 @@ html,
 body {
 	height: 100%;
 }
+
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
@@ -31,6 +32,13 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+
+button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
 }
 
 p,

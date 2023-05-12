@@ -1,7 +1,33 @@
-.icon-toggle {
+@font-face {
+  font-family: 'MiFuente';
+  src: url('/fonts/.ttf') format('opentype');
+}
+
+.icon {
   display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.icon-toggle {
   width: 25px;
   height: 11px;
-  background-image: url('../../public/toggle.svg');
-  background-repeat: no-repeat;
+  background-image: url('/icons/toggle.svg');
+}
+
+.icon-lang {
+  width: 16px;
+  height: 16px;
+  background-image: url('/icons/lang.svg');
+}
+
+.icon-arrow-down {
+  width: 12px;
+  height: 19px;
+  background-image: url('/icons/arrow-down.svg');
+}
+
+.icon-arrow-right {
+  width: 19px;
+  height: 12px;
+  background-image: url('/icons/arrow-right.svg');
 }

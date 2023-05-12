@@ -1,0 +1,20 @@
+:root {
+  --blue-green: #004A3C;
+  --alabaster: #F2EBE4;
+  --white-coffee: #E6DBD2;
+  --milk-chocolate: #7F4F2E;
+  --ripe-mango: #FECA22;
+
+  --accent: var(--blue-green);
+  --accent-2: var(--ripe-mango);
+  --fg: var(--milk-chocolate);
+  --bg: var(--alabaster);
+
+  --h1: 4.3rem;
+  --h2: 3.1rem;
+  --body: 1rem;
+}
+
+.marquee {
+  background-color: green;
+}

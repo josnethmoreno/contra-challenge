@@ -17,8 +17,22 @@ let currentPage = splide.index + 1
 let currentPageDiv = document.querySelector('.splide__current-page')
 currentPageDiv.innerText = currentPage
 
+
+const pageName = {
+	1: 'Flat screen TV',
+	2: 'Terrace',
+	3: 'Minibar',
+	4: 'Pool'
+}
+
+const currentPageNameDiv = document.querySelector('.splide__name')
+let currentPageName = pageName[currentPage]
+currentPageNameDiv.innerText = `${currentPageName}`
+
 splide.on('move', function () {
 	currentPage = splide.index + 1
 	currentPageDiv = document.querySelector('.splide__current-page')
 	currentPageDiv.innerText = currentPage
+	currentPageName = pageName[currentPage]
+	currentPageNameDiv.innerText = `${currentPageName}`
 })

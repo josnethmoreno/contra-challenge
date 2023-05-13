@@ -377,7 +377,8 @@ header {
 }
 
 .splide-controls .splide__name {
-	width: 60px;
+	width: 80px;
+	white-space: nowrap;
 }
 
 @media (max-width: 600px) {

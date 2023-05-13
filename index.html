@@ -38,6 +38,9 @@
       <div class="container">
         <div class="hero-content">
           <h1>Superior Queen Room</h1>
+          <figure class="hero-figure mobile">
+            <img srcset="./src/img/hero-figure-sm.jpg" alt="hero">
+          </figure>
           <p>
             The Superior room is perfect for those seeking a comfortable and elevated hotel experience. The room comes
             equipped with a king-size bed, providing ample space to stretch out and relax after a day of exploring. The
@@ -53,7 +56,7 @@
           </a>
         </div>
         <figure class="hero-figure">
-          <img src="./src/img/hero-figure.jpg" alt="">
+          <img srcset="./src/img/hero-figure.jpg" alt="hero">
         </figure>
       </div>
     </section>
@@ -131,7 +134,7 @@
     </section>
     <section class="areas" id="areas">
       <div class="container">
-        <p>
+        <p class="areas-paragraph">
           For those who require connectivity, the room also includes WiFi, making it easy to stay in touch. The mini bar
           provides a selection of refreshing beverages and snacks, allowing guests to indulge and relax in the comfort
           of their own space. Book now and experience the ultimate getaway!
@@ -151,25 +154,21 @@
             <ul class="splide__list">
               <li class="splide__slide">
                 <img src="./src/img/carousel/flat-screen.jpg" alt="Flat screen TV">
-                <figcaption>Flat tv screen</figcaption>
               </li>
               <li class="splide__slide">
                 <img src="./src/img/carousel/terrace.jpg" alt="Terrace">
-                <figcaption>Terrace</figcaption>
               </li>
               <li class="splide__slide">
                 <img src="./src/img/carousel/bar.jpg" alt="Minibar">
-                <figcaption>Minibar</figcaption>
               </li>
               <li class="splide__slide">
                 <img src="./src/img/carousel/pool.jpg" alt="Pool">
-                <figcaption>Pool</figcaption>
               </li>
             </ul>
           </div>
           <div class="splide-controls">
-            <div class="splide__margin"></div>
-            <div class="splide__pagination">
+            <div class="splide__name">Pool</div>
+            <div class="splide__pag">
               <span class="splide__current-page"></span>/
               <span class="splide__total-page"></span>
             </div>
@@ -195,7 +194,7 @@
     </section>
     <footer class="footer" id="footer">
       <div class="container">
-        <div class="footer-flex">
+        <div class="footer-grid">
           <div class="footer-we">
             <a href="#0">Rooms</a>
             <a href="#0">Amenities</a>
@@ -218,12 +217,20 @@
           </div>
         </div>
         <div class="footer-brand">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153 28"><path fill="currentColor" d="M15.057 27.448h-4.915L.654.434h4.801l7.43 22.306h2.44L22.716.434h1.868l-9.527 27.014ZM30.448 15.911c0 2.91 1.652 7.38 9.696 7.38s10.413-3.793 10.413-7.38H30.448Zm22.365-1.82c0 7.485-5.013 13.356-12.89 13.356-6.335 0-11.568-3.897-11.568-12.94v-2.495h22.31c0-4.157-2.919-7.223-10.742-7.43-5.729.103-9.254 1.455-9.254 4.573H28.52c0-4.47 4.573-8.73 11.403-8.73 8.925 0 12.89 6.13 12.89 13.667ZM68.053 12.177h7.811V5.142h-7.811c-6.365 0-8.917.347-8.917 3.358 0 3.01 2.63 3.677 8.917 3.677ZM57.688 8.383c0-7.487 3.776-8.23 10.097-7.95h9.64v27.015h-1.562V16.643h-8.078c-.725 0-1.448-.038-2.096-.115L60.584 27.45h-2.515l5.258-11.346c-4.038-1.197-5.64-4.092-5.64-7.72M92.34.434c6.441 0 10.746 2.948 10.746 8.133 0 9.814-18.633 6.344-18.633 11.68 0 1.529 1.448 2.76 7.506 2.76 5.448 0 8.612-1.083 8.612-3.06h1.41c0 4.776-4.572 7.5-9.907 7.5-5.03 0-9.145-2.5-9.183-7.015-.037-10.522 18.634-6.232 18.634-12.014 0-2.24-2.286-3.546-8.955-3.546-6.67 0-8.956 2.39-8.956 4.702h-1.447c0-4.888 3.582-9.142 10.174-9.142M107.259 18.07V.434h1.563v16.425c0 3.973 1.333 5.904 8.65 5.904 7.316 0 8.612-1.93 8.612-5.904V.434h1.563V18.07c0 5.753-2.781 9.385-10.174 9.385-7.392 0-10.212-3.632-10.212-9.385M142.536 27.449c-6.439 0-10.746-2.949-10.746-8.134 0-9.813 18.634-6.344 18.634-11.679 0-1.53-1.448-2.76-7.507-2.76-5.448 0-8.612 1.082-8.612 3.06h-1.41c0-4.776 4.573-7.5 9.907-7.5 5.031 0 9.145 2.5 9.184 7.014.038 10.523-18.633 6.232-18.633 12.015 0 2.239 2.286 3.545 8.955 3.545 6.67 0 8.956-2.389 8.956-4.702h1.448c0 4.888-3.581 9.142-10.173 9.142"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153 28">
+            <path fill="currentColor"
+              d="M15.057 27.448h-4.915L.654.434h4.801l7.43 22.306h2.44L22.716.434h1.868l-9.527 27.014ZM30.448 15.911c0 2.91 1.652 7.38 9.696 7.38s10.413-3.793 10.413-7.38H30.448Zm22.365-1.82c0 7.485-5.013 13.356-12.89 13.356-6.335 0-11.568-3.897-11.568-12.94v-2.495h22.31c0-4.157-2.919-7.223-10.742-7.43-5.729.103-9.254 1.455-9.254 4.573H28.52c0-4.47 4.573-8.73 11.403-8.73 8.925 0 12.89 6.13 12.89 13.667ZM68.053 12.177h7.811V5.142h-7.811c-6.365 0-8.917.347-8.917 3.358 0 3.01 2.63 3.677 8.917 3.677ZM57.688 8.383c0-7.487 3.776-8.23 10.097-7.95h9.64v27.015h-1.562V16.643h-8.078c-.725 0-1.448-.038-2.096-.115L60.584 27.45h-2.515l5.258-11.346c-4.038-1.197-5.64-4.092-5.64-7.72M92.34.434c6.441 0 10.746 2.948 10.746 8.133 0 9.814-18.633 6.344-18.633 11.68 0 1.529 1.448 2.76 7.506 2.76 5.448 0 8.612-1.083 8.612-3.06h1.41c0 4.776-4.572 7.5-9.907 7.5-5.03 0-9.145-2.5-9.183-7.015-.037-10.522 18.634-6.232 18.634-12.014 0-2.24-2.286-3.546-8.955-3.546-6.67 0-8.956 2.39-8.956 4.702h-1.447c0-4.888 3.582-9.142 10.174-9.142M107.259 18.07V.434h1.563v16.425c0 3.973 1.333 5.904 8.65 5.904 7.316 0 8.612-1.93 8.612-5.904V.434h1.563V18.07c0 5.753-2.781 9.385-10.174 9.385-7.392 0-10.212-3.632-10.212-9.385M142.536 27.449c-6.439 0-10.746-2.949-10.746-8.134 0-9.813 18.634-6.344 18.634-11.679 0-1.53-1.448-2.76-7.507-2.76-5.448 0-8.612 1.082-8.612 3.06h-1.41c0-4.776 4.573-7.5 9.907-7.5 5.031 0 9.145 2.5 9.184 7.014.038 10.523-18.633 6.232-18.633 12.015 0 2.239 2.286 3.545 8.955 3.545 6.67 0 8.956-2.389 8.956-4.702h1.448c0 4.888-3.581 9.142-10.173 9.142" />
+          </svg>
+          <svg class="mobile" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 344 187"><g clip-path="url(#a)"><path d="M93.91 179.944H62.032L.5 6.98h31.141l48.183 142.817h15.8L143.563 6.98h12.111L93.909 179.944ZM237.043.277c44.996 0 75.085 20.343 75.085 56.112 0 67.703-130.202 43.771-130.202 80.578 0 10.553 10.121 19.045 52.45 19.045 38.076 0 60.178-7.468 60.178-21.107h9.846c0 32.944-31.948 51.744-69.231 51.744-35.149 0-63.897-17.243-64.171-48.399-.26-72.59 130.202-42.992 130.202-82.885 0-15.44-15.974-24.451-62.571-24.451-46.596 0-62.571 16.479-62.571 32.439h-10.12c0-33.722 25.028-63.076 71.091-63.076M339.78 180.261c-2.479 2.091-5.622 3.143-9.428 3.143-3.807 0-6.964-1.067-9.501-3.215-2.538-2.148-3.807-4.974-3.807-8.477s1.269-6.329 3.807-8.477c2.537-2.149 5.694-3.215 9.501-3.215 3.806 0 6.949 1.052 9.428 3.142 2.48 2.091 3.734 4.946 3.734 8.55 0 3.604-1.239 6.459-3.734 8.549Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.5.277h343v186.386H.5z"/></clipPath></defs></svg>
         </div>
         <div class="footer-data">
-          <div class="footer-address">Calle 16 #89-29. El Poblado, Medellin.</div>
-          <div class="footer-copy">©2023 Versus Hotels</div>
-          <div class="footer-author">Website by contra</div>
+          <div class="footer-data-l">
+            <p>Calle 16 #89-29. El Poblado, Medellin.</p>
+          </div>
+          <div class="footer-data-r">
+            <p class="footer-copy">©2023 Versus Hotels</p>
+            <p class="footer-author">Website by contra</p>
+          </div>
         </div>
       </div>
     </footer>

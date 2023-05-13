@@ -2,6 +2,8 @@ import '../css/style.css'
 import '../css/reset.css'
 import '../css/icons.css'
 
+
+/* SPLIDE CONFIG JS */
 import Splide from '@splidejs/splide/dist/js/splide'
 
 const splide = new Splide('.splide', {

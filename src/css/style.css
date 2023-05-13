@@ -265,7 +265,7 @@ header {
 	}
 }
 
-/*SERVICES*/
+/* SERVICES */
 .services > .container {
 	display: flex;
 	gap: var(--spacer-2);
@@ -315,7 +315,7 @@ header {
 	}
 }
 
-/*AREAS*/
+/* AREAS */
 .areas p {
 	max-width: 672px;
 	text-align: center;
@@ -362,7 +362,7 @@ header {
 	}
 }
 
-/*SPLIDE*/
+/* SPLIDE */
 .splide {
 	padding: var(--spacer-2) 0;
 }
@@ -404,10 +404,31 @@ header {
 }
 
 .footer a {
+	position: relative;
 	color: var(--accent-2);
 	text-transform: uppercase;
-	text-decoration: underline;
+	align-self: start;
 }
+
+.footer a::before {
+	content: '';
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  pointer-events: none;
+	transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.3s;
+}
+
+.footer a:hover::before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+}
+
 .footer-grid {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);

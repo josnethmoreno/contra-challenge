@@ -24,6 +24,11 @@
 	--spacer-3: 4rem;
 	--spacer-4: 6rem;
 	--spacer-5: 8rem;
+
+	--transition-quick: 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+	--transition-medium: 0.65s cubic-bezier(0.19, 1, 0.22, 1);
+	--transition-slow: 0.95s cubic-bezier(0.19, 1, 0.22, 1);
+	--transition-slower: 0.95s cubic-bezier(1, -0.21, 0.84, 0.7);
 }
 
 @media (max-width: 600px) {
@@ -39,6 +44,7 @@ html {
 }
 
 body {
+	position: relative;
 	font-size: 16px;
 	background-color: var(--bg);
 	font-family: 'Space Grotesk';
@@ -64,7 +70,7 @@ section {
 
 @media (max-width: 600px) {
 	.container {
-		padding: .5rem;
+		padding: 0.5rem;
 	}
 }
 
@@ -80,6 +86,7 @@ h4 {
 h1,
 .h1 {
 	font-size: var(--h1);
+	line-height: 1.1;
 }
 
 h2,
@@ -168,7 +175,6 @@ header {
 .hero {
 	padding-top: var(--spacer-5);
 }
-
 .hero > .container {
 	display: flex;
 	gap: var(--spacer-2);
@@ -178,31 +184,46 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacer-2);
+	transform: translateX(-64px);
+	opacity: 0;
+}
+
+.hero-content h1 {
+	line-height: 1.1;
 }
 
 .hero-content p {
 	max-width: 436px;
 }
 
-.hero-content h1 {
-	line-height: 1.1;
-	max-width: 10ch;
-}
-
 .hero-cta {
-	display: inline-flex;
+	position: relative;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	align-self: start;
 	gap: var(--spacer);
+	padding-top: 2rem;
 	color: var(--fg);
 	text-transform: uppercase;
+}
+
+.hero-cta i {
+	position: absolute;
+	top: 0;
+	transition: var(--transition-quick);
+}
+
+.hero-cta:hover i {
+	top: calc(100% + .6rem);
 }
 
 .hero-figure img {
 	object-fit: cover;
 	object-position: right;
-	min-height: 460px;
+	min-height: 600px;
+	clip-path: inset(0 100% 0 0);
+	transition: clip-path var(--transition-slower);
 }
 
 .hero-figure.mobile {
@@ -228,6 +249,7 @@ header {
 
 	.hero-figure.mobile img {
 		width: 100%;
+		min-height: auto;
 	}
 
 	.hero-cta {
@@ -237,12 +259,16 @@ header {
 
 /* MARQUEE */
 .marquee {
+	background-color: var(--accent);
+	opacity: 0;
+}
+
+.marquee > .container {
 	display: flex;
 	gap: var(--spacer);
 	padding: 1.6rem 0 1.5rem;
-	background-color: var(--accent);
-	overflow: hidden;
 	user-select: none;
+	overflow: hidden;
 }
 
 .marquee p {
@@ -297,6 +323,21 @@ header {
 	color: var(--fg);
 }
 
+.services-figure {
+	overflow: hidden;
+}
+
+.services-figure img {
+	transition: var(--transition-quick);
+	clip-path: inset(0 0 0 0);
+}
+
+.services-figure:hover img {
+	transform: scale(1.08);
+	clip-path: inset(5% 5% 5% 5%);
+
+}
+
 .services-figure figcaption {
 	color: var(--accent);
 	text-transform: uppercase;
@@ -336,6 +377,11 @@ header {
 .areas-card:last-child {
 	align-self: flex-end;
 	transform: translateY(-120px);
+}
+
+.areas-card img {
+	clip-path: inset(0 0 100% 0);
+	transition: var(--transition-slow);
 }
 
 @media (max-width: 1220px) {
@@ -412,21 +458,21 @@ header {
 
 .footer a::before {
 	content: '';
-  position: absolute;
-  top: calc(100% - 4px);
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: currentColor;
-  pointer-events: none;
+	position: absolute;
+	top: calc(100% - 4px);
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: currentColor;
+	pointer-events: none;
 	transform-origin: 0% 50%;
-  transform: scale3d(1, 1, 1);
-  transition: transform 0.3s;
+	transform: scale3d(1, 1, 1);
+	transition: transform var(--transition-medium);
 }
 
 .footer a:hover::before {
-  transform-origin: 100% 50%;
-  transform: scale3d(0, 1, 1);
+	transform-origin: 100% 50%;
+	transform: scale3d(0, 1, 1);
 }
 
 .footer-grid {
@@ -449,6 +495,7 @@ header {
 
 .footer-brand {
 	padding: var(--spacer-2) 0;
+	opacity: 0;
 }
 
 .footer-brand svg {
@@ -494,7 +541,7 @@ header {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacer-2);
-		padding: var(--spacer-2) .5rem;
+		padding: var(--spacer-2) 0.5rem;
 	}
 
 	.footer-grid {
@@ -520,7 +567,7 @@ header {
 	.footer-grid div:nth-child(2) {
 		order: 3;
 	}
-	
+
 	.footer-social {
 		grid-column-start: auto;
 		grid-column-end: auto;

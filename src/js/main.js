@@ -2,13 +2,65 @@ import '../css/style.css'
 import '../css/reset.css'
 import '../css/icons.css'
 
+import Splide from '@splidejs/splide/dist/js/splide'
+import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+/* GSAP */
+const tl = gsap.timeline()
+
+tl.to('.hero-content', { duration: 1.2, x: 0, opacity: 1 }, 0)
+	.to( '.hero-figure img', { 
+		duration: 0, clipPath: 'inset(0 0 0 0)' 
+	}, 0.2)
+
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.to('.marquee', {
+	scrollTrigger: {
+		trigger: '.marquee',
+		start: 'top bottom-=50px',
+	},
+	opacity: 1,
+	duration: 0.3,
+	ease: 'power2.in',
+})
+
+gsap.to('.areas-bathroom', {
+	scrollTrigger: {
+		trigger: '.areas-bathroom',
+		start: 'top bottom-=50px',
+	},
+	clipPath: 'inset(0 0 0 0)',
+	duration: 0.3,
+	ease: 'power2.in',
+})
+
+gsap.to('.areas-desk', {
+	scrollTrigger: {
+		trigger: '.areas-desk',
+		start: 'top bottom',
+	},
+	clipPath: 'inset(0 0 0 0)',
+	duration: 0.3,
+	ease: 'power2.in',
+})
+
+gsap.to('.footer-brand', {
+	scrollTrigger: {
+		trigger: '.footer-brand',
+		start: 'top bottom-=250px',
+	},
+	opacity: 1,
+	duration: 0.3,
+	ease: 'power2.in',
+})
+
 
 /* SPLIDE CONFIG JS */
-import Splide from '@splidejs/splide/dist/js/splide'
-
 const splide = new Splide('.splide', {
 	pagination: true,
-	perPage: 1,
+	perPage: 1
 }).mount()
 
 const totalPage = splide.length
@@ -18,7 +70,6 @@ totalPageDiv.innerText = totalPage
 let currentPage = splide.index + 1
 let currentPageDiv = document.querySelector('.splide__current-page')
 currentPageDiv.innerText = currentPage
-
 
 const pageName = {
 	1: 'Flat screen TV',

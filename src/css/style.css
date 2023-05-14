@@ -109,7 +109,6 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	padding: 1rem 0;
 	background-color: var(--bg);
 	z-index: 10;
 }
@@ -124,6 +123,7 @@ header {
 }
 
 .nav {
+	padding: 1rem 0;
 	container-type: inline-size;
 	container-name: navbar;
 }
@@ -139,6 +139,11 @@ header {
 	gap: 0.4rem;
 }
 
+.nav-toggle {
+	z-index: 20;
+	filter: invert(100%)
+}
+
 .nav-lang {
 	color: var(--accent);
 	text-transform: uppercase;
@@ -148,6 +153,39 @@ header {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+}
+
+.nav-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacer);
+	position: absolute;
+	top: 0;
+	left: -110%;
+	width: 100vw;
+	height: 100vh;
+	background: var(--accent);
+}
+
+.nav-menu[data-show="true"] {
+	left: 0;
+}
+
+.nav-menu * {
+	color: var(--beige)
+}
+
+.nav-menu h4 {
+	font-size: 10rem;
+	line-height: 1;
+}
+
+.nav-menu-marks {
+	display: flex;
+	align-items: center;
+	gap: var(--spacer);
 }
 
 @container navbar (max-width: 820px) {

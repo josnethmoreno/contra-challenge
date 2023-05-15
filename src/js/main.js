@@ -13,7 +13,7 @@ const tl = gsap.timeline()
 tl.to('.hero-content', { duration: 1.2, x: 0, opacity: 1 }, 0)
 	.to( '.hero-figure img', { 
 		duration: 0, clipPath: 'inset(0 0 0 0)' 
-	}, 0.2)
+	}, 0.6)
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -40,7 +40,7 @@ gsap.to('.areas-bathroom', {
 gsap.to('.areas-desk', {
 	scrollTrigger: {
 		trigger: '.areas-desk',
-		start: 'top bottom-=50px',
+		start: 'top bottom-=80px',
 	},
 	clipPath: 'inset(0 0 0 0)',
 	duration: 0.3,

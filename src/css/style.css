@@ -456,13 +456,6 @@ header {
 
 .areas-card img {
 	clip-path: inset(0 0 100% 0);
-}
-
-.areas-card:first-child img {
-	transition: clip-path var(--transition-slow);
-}
-
-.areas-card:last-child img {
 	transition: clip-path var(--transition-slow);
 }
 

@@ -28,7 +28,7 @@
 	--transition-quick: 0.35s cubic-bezier(0.19, 1, 0.22, 1);
 	--transition-medium: 0.65s cubic-bezier(0.19, 1, 0.22, 1);
 	--transition-slow: 0.95s cubic-bezier(0.19, 1, 0.22, 1);
-	--transition-slower: 0.95s cubic-bezier(1, -0.21, 0.84, 0.7);
+	--transition-slower: 0.95s cubic-bezier(0.76, 0.49, 0.39, 1);
 }
 
 @media (max-width: 600px) {
@@ -178,7 +178,7 @@ header {
 }
 
 .nav-menu h4 {
-	font-size: 10rem;
+	font-size: 8rem;
 	line-height: 1;
 	filter: blur(40px);
 	opacity: 0;
@@ -239,6 +239,10 @@ header {
 
 	.nav-center {
 		display: none;
+	}
+
+	.nav-menu h4 {
+		font-size: 6rem;
 	}
 }
 
@@ -452,7 +456,14 @@ header {
 
 .areas-card img {
 	clip-path: inset(0 0 100% 0);
-	transition: var(--transition-slow);
+}
+
+.areas-card:first-child img {
+	transition: clip-path var(--transition-slow);
+}
+
+.areas-card:last-child img {
+	transition: clip-path var(--transition-slow);
 }
 
 @media (max-width: 1220px) {

@@ -31,6 +31,7 @@ gsap.to('.areas-bathroom', {
 	scrollTrigger: {
 		trigger: '.areas-bathroom',
 		start: 'top bottom-=350px',
+		markers: true
 	},
 	clipPath: 'inset(0 0 0 0)',
 	duration: 0.3,
@@ -41,6 +42,7 @@ gsap.to('.areas-desk', {
 	scrollTrigger: {
 		trigger: '.areas-desk',
 		start: 'top bottom-=80px',
+		markers: true
 	},
 	clipPath: 'inset(0 0 0 0)',
 	duration: 0.3,

@@ -3,6 +3,7 @@ import '../css/reset.css'
 import '../css/icons.css'
 
 import Splide from '@splidejs/splide/dist/js/splide'
+
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -88,4 +89,14 @@ splide.on('move', function () {
 	currentPageDiv.innerText = currentPage
 	currentPageName = pageName[currentPage]
 	currentPageNameDiv.innerText = `${currentPageName}`
+})
+
+
+/* NAV MENU */
+const btnToggle = document.querySelector('.nav-toggle')
+const navMenu = document.querySelector('.nav-menu')
+
+btnToggle.addEventListener('click', () => {
+	const showMenu = (navMenu.getAttribute('data-show') === 'true')
+	navMenu.setAttribute('data-show', !showMenu)
 })

@@ -30,7 +30,7 @@ gsap.to('.marquee', {
 gsap.to('.areas-bathroom', {
 	scrollTrigger: {
 		trigger: '.areas-bathroom',
-		start: 'top bottom-=350px',
+		start: 'top bottom-=200px',
 	},
 	clipPath: 'inset(0 0 0 0)',
 	duration: 0.3,
@@ -40,7 +40,7 @@ gsap.to('.areas-bathroom', {
 gsap.to('.areas-desk', {
 	scrollTrigger: {
 		trigger: '.areas-desk',
-		start: 'top bottom-=80px',
+		start: 'top bottom-=60px',
 	},
 	clipPath: 'inset(0 0 0 0)',
 	duration: 0.3,
@@ -50,7 +50,7 @@ gsap.to('.areas-desk', {
 gsap.to('.footer-brand', {
 	scrollTrigger: {
 		trigger: '.footer-brand',
-		start: 'top bottom-=250px',
+		start: 'top bottom-=200px',
 	},
 	opacity: 1,
 	duration: 0.3,
